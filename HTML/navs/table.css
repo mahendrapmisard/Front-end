@@ -1,0 +1,21 @@
+
+      .table,
+      th,
+      td {
+        border: 2px solid black;
+        border-collapse: collapse;
+        text-align: center;
+      }
+
+      th {
+        background-color: lightcoral;
+        color: white;
+      }
+      tbody {
+        background-color: lightblue;
+      }
+      tfoot {
+        background-color: yellow;
+        color: red;
+        font-weight: bold;
+      }

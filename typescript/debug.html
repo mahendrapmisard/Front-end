@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Debugging Practice</title>
+</head>
+<body>
+
+<script>
+
+function calculateTotal(price, quantity) {
+
+    let total = price * quantity;
+
+    return total;
+}
+
+function calculateDiscount(total) {
+
+    let discount = total * 0.10;
+
+    return discount;
+}
+
+function generateBill() {
+
+    let price = 100;
+    let quantity = 3;
+
+    let total = calculateTotal(price, quantity);
+
+    let discount = calculateDiscount(total);
+
+    let finalAmount = total - discount;
+
+    console.log("Final Amount:", finalAmount);
+}
+
+generateBill();
+
+</script>
+
+</body>
+</html>

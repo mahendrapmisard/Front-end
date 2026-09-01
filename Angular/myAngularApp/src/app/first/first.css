@@ -1,0 +1,13 @@
+.box {
+  width: 300px;
+  padding: 30px;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+button {
+  margin: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+}

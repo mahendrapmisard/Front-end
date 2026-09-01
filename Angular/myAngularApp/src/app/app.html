@@ -16,5 +16,31 @@
 <p>so your name is {{ fname }}</p>
 
 <h1></h1>
+<!-- @ngif (isliked) {
+<i type="button" class="bi bi-suit-heart-fill" (onclick)="heartliked()"></i>
+} -->
 
-<i class="bi bi-suit-heart-fill"></i>
+@if (isliked) {
+  <i type="button" [style.color]="'red'" class="bi bi-suit-heart-fill" (click)="heartliked()"></i>
+} @else {
+  <i type="button" [style.color]="'grey'" class="bi bi-suit-heart" (click)="heartliked()"></i>
+}
+
+{{ likes }}
+
+{{ isliked }}
+
+<br />
+<app-first></app-first>
+
+<h1 [ngStyle]="{ color: 'red' }">this is property binding</h1>
+
+<!-- --string interpolation -->
+
+<input type="textarea" value="{{ textvalue }}" />
+
+<h1>{{ para }}</h1>
+
+<input type="text" value="{{ para }}" [attr.maxlength]="max_length" min="{{ min_length }}" />
+
+<app-first></app-first>

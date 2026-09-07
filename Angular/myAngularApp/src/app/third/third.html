@@ -1,0 +1,54 @@
+<p>third works!</p>
+<h1>mahendra</h1>
+
+<!-- string interpolation -->
+<p style="background-color: pink">{{ para }}</p>
+
+<!-- property binding -->
+<!-- <input type="textbox" [placeholder]="nameplaceholder" /> -->
+
+<!-- event binding -->
+<button (click)="submitclicked($event)">Submit</button>
+
+<!-- <input type="textbox" [placeholder]="nameplaceholder" /> -->
+
+<input type="textbox" (keyup)="pickthename($event)" />
+
+<p>so your name is {{ fname }}</p>
+
+<h1></h1>
+<!-- @ngif (isliked) {
+<i type="button" class="bi bi-suit-heart-fill" (onclick)="heartliked()"></i>
+} -->
+
+@if (isliked) {
+  <i type="button" [style.color]="'red'" class="bi bi-suit-heart-fill" (click)="heartliked()"></i>
+} @else {
+  <i type="button" [style.color]="'grey'" class="bi bi-suit-heart" (click)="heartliked()"></i>
+}
+
+{{ likes }}
+
+{{ isliked }}
+
+<br />
+<!-- <app-first></app-first> -->
+
+<h1 [ngStyle]="{ color: 'red' }">this is property binding</h1>
+
+<!-- --string interpolation -->
+
+<input type="textarea" value="{{ textvalue }}" />
+
+<h1>{{ para }}</h1>
+
+<input type="text" value="{{ para }}" [attr.maxlength]="max_length" min="{{ min_length }}" />
+
+<br />
+
+<!-- <app-first></app-first> -->
+
+<br />
+
+<br />
+<!-- <app-first></app-first> -->

@@ -1,0 +1,84 @@
+<!-- <p [style.color]="textcolor">second works!</p> -->
+
+<div>
+  <button
+    [ngStyle]="{
+      'background-color': backgroundcolor,
+      color: btncolor,
+    }"
+    (click)="btnclick($event)"
+  >
+    {{ buttontext }}
+  </button>
+</div>
+<div></div>
+
+<br />
+<div>
+  <button
+    [ngClass]="{
+      redlight: trafficlight == 'red',
+      greenlight: trafficlight == 'green',
+      orangelight: trafficlight == 'orange',
+    }"
+  >
+    ngclass
+  </button>
+</div>
+<br />
+
+<span style="display: flex; gap: 15px">
+  <span>
+    <button [style.background-color]="'green'" value="green" (click)="changefunction($event)">
+      green
+    </button>
+  </span>
+  <span>
+    <button [style.background-color]="'red'" value="red" (click)="changefunction($event)">
+      red
+    </button>
+  </span>
+  <span>
+    <button [style.background-color]="'orange'" value="orange" (click)="changefunction($event)">
+      orange
+    </button>
+  </span>
+</span>
+
+<ul>
+  @for (i of products; track i.productId) {
+    <li>{{ i.productName }}has {{ i.price }}</li>
+  }
+</ul>
+<!-- <h4>please enter the marks</h4> -->
+<input type="text" [(ngModel)]="marks" #enteredmarks />
+
+<!-- <ng-template *ngIf="marks >= 75;else failed"><h1>{{ pass }}</h1></ng-template> -->
+
+<!-- <ng-template *ngIf="marks == 0; else nomessage"><h2>please enter the marks</h2></ng-template> -->
+
+<!-- <ng-template #nomessage; ><h1 *ngIf="marks < 75; else passedtemplate">{{ failed }}</h1></ng-template> -->
+
+<ng-template #passedtemplate;
+  ><h3>{{ pass }}</h3></ng-template
+>
+
+<button (click)="checkresult(enteredmarks.value)">click here</button>
+
+<h2>{{ message }}</h2>
+
+<h1>{{ marks }}</h1>
+
+<ul *ngFor="let i of products">
+  <li>{{ i.price }}</li>
+</ul>
+
+@if (marks == '') {
+  <h1>please enter the marks</h1>
+} @else if (marks > 0 && marks < 75) {
+  <h1>Sorry you are failed</h1>
+} @else if (marks > 75 && marks < 101) {
+  <h1>pass</h1>
+} @else {
+  <h1>pelase enter valid marks</h1>
+}

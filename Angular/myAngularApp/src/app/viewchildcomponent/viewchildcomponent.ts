@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ɵEmptyOutletComponent } from "@angular/router";
 
 @Component({
   selector: 'app-viewchildcomponent',
@@ -8,5 +9,5 @@ import { Component } from '@angular/core';
 })
 export class Viewchildcomponent {
 
-  
+
 }

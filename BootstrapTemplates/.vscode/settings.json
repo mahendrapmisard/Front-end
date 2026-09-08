@@ -1,0 +1,5 @@
+{
+  "appService.defaultWebAppToDeploy": "undefined/subscriptions/ad064858-eca0-45e5-b59c-026c5e48ba6f/resourceGroups/appsvc_windows_centralus/providers/Microsoft.Web/sites/ngbootsrap",
+  "appService.deploySubpath": ".",
+  "liveServer.settings.port": 4202
+}

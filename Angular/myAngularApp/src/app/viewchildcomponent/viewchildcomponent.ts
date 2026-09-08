@@ -6,4 +6,7 @@ import { Component } from '@angular/core';
   templateUrl: './viewchildcomponent.html',
   styleUrl: './viewchildcomponent.css',
 })
-export class Viewchildcomponent {}
+export class Viewchildcomponent {
+
+  
+}

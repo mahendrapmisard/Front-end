@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="/Images/favicon.png">
+    <title>Misard-Bootstrap-Course</title>
+    <link
+      rel="stylesheet"
+      href="/BootstrapTemplates/node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <style>
+       .navbar-custom {
+        background-color: rgb(30, 81, 85);
+      }
+
+      .btn.btn-primary {
+        background-color: rgb(30, 81, 85) !important;
+      }
+
+      .bg
+
+      a {
+        color: rgb(30, 81, 85);
+        font-weight: bold;
+      }
+
+      /* Custom Styles */
+      .card {
+        margin-bottom: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      .card-body {
+        text-align: center;
+      }
+      .card-title {
+        margin-bottom: 15px;
+        font-size: 18px;
+      }
+
+      .navbar-custom .navbar-brand,
+      .navbar-custom .navbar-nav .nav-link {
+        color: #ffffff; /* White */
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-custom">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="https://misardcourses.azurewebsites.net/">Bootstrap templates</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse ms-auto" id="navbarNav">
+          <ul
+            class="navbar-nav ms-auto text-end"
+            style="margin-right: 100px !important"
+          >
+            <li class="nav-item">
+              <a class="nav-link" href="https://misardcourses.azurewebsites.net/">Courses</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container mt-5">
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-header bg-primary text-white">
+              Customer Registration Page
+            </div>
+            <div class="card-body">
+              <form>
+                <div class="mb-3 row">
+                  <label for="name" class="col-sm-3 col-form-label">Name</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                  </div>
+                </div>
+                <div class="mb-3 row">
+                  <label for="email" class="col-sm-3 col-form-label">Email</label>
+                  <div class="col-sm-9">
+                    <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                  </div>
+                </div>
+                <div class="mb-3 row">
+                  <label for="password" class="col-sm-3 col-form-label">Password</label>
+                  <div class="col-sm-9">
+                    <input type="password" class="form-control" id="email" placeholder="Enter your Password">
+                  </div>
+                </div>
+                <div class="mb-3 row">
+                  <label for="location" class="col-sm-3 col-form-label">Email</label>
+                  <div class="col-sm-9">
+                    <input type="location" class="form-control" id="location" placeholder="Enter your Location">
+                  </div>
+                </div>
+                <div class="mb-3 row">
+                  <label for="message" class="col-sm-3 col-form-label">Message</label>
+                  <div class="col-sm-9">
+                    <textarea class="form-control" id="message" rows="4" placeholder="Enter your personal details"></textarea>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-9 offset-sm-3">
+                    <button type="submit" class="btn btn-primary btn-block">Submit</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+  </body>
+</html>

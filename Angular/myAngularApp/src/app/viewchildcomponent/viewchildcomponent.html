@@ -1,6 +1,72 @@
-<!-- <p>created in viewchildcomponent git branch !</p> -->
-<ng-content></ng-content>
+<div class="card shadow-sm m-4 text-white">
+  <div class="card-header bg-primary m-1">
+    <h2>This is ng content</h2>
+    <ng-content select=".employee-name"></ng-content>
+  </div>
+  <div class="card-body bg-secondary m-1 text-white">
+    <ng-content select=".employee-info"></ng-content>
+  </div>
+</div>
+
+<div class="card shadow-sm m-4 text-white">
+  <div class="card-header bg-primary m-1">
+    <h2>this is view child</h2>
+    <ng-content select=".employee-name"></ng-content>
+
+    <input type="text" #employeename placeholder="enter the values" />
+  </div>
+  <div class="card-body bg-secondary m-1 text-white">
+    <ng-content select=".employee-info"></ng-content>
+
+    <div class="d-flex align-items-center gap-2">
+      <!-- <div> -->
+      <button class="btn btn-primary mb-0" (click)="showemployee()">click</button>
+      <!-- </div>   -->
+      <!-- <div> -->
+      <h2>{{ empname }}</h2>
+      <!-- </div> -->
+    </div>
+  </div>
+</div>
+
+<br />
+<!-- 
+<p #empooyeeinfo>
+  he is a employee who started his carrer in the zensar and now he is curretly working in the misard
+</p>
+
+<button class="btn btn-primary" (click)="showemployee()">click</button>
+
+ <h1>{{empname.}}</h1>
 <div>
-<h2 #companyname>misard info</h2>
-<p>company is very good and teaching is also very nice</p>
+  {{ emname }}
+</div> -->
+
+<br />
+
+<div class="card shadow-sm m-4 text-black">
+  <div class="card-header bg-primary" mt-2>
+    <h2>This is View children</h2>
+  </div>
+  <div class="card-body mt-3">
+    <div>
+      <h4>Enter your role</h4>
+      <input class="form-control" type="text" #employeeinfo placeholder="enter the value" />
+    </div>
+    <div>
+      <h4>Enter your experience</h4>
+      <input class="form-control" type="text" #employeeinfo placeholder="enter the values" />
+    </div>
+    <div>
+      <h4>Enter your techstack</h4>
+      <input class="form-control" type="text" #employeeinfo placeholder="enter the values" />
+    </div>
+
+    <button class="btn btn-success mt-3" (click)="showEmpInfo()">click for employee info</button>
+    <!-- <div>{{employeeinfo}}</div> -->
+    <h3>{{ message }}</h3>
+    @for (item of empinfo; track $index) {
+      <h5>{{ item }}</h5>
+    }
+  </div>
 </div>

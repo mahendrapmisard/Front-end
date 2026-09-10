@@ -1,6 +1,38 @@
 <!-- <p>content-childcomponent works!</p> -->
 <!-- <ng-content></ng-content> -->
+<div class="card shadow-sm m-4 text-white">
+  <div class="card-header bg-primary m-1">
+    <h2>This is content child</h2>
+  </div>
+  <div class="card-body bg-secondary m-1 text-white">
+    <h5>
+      Getting this data from parent html
+      <div style="color: red; text-shadow: black">{{ empname }}</div>
+    </h5>
+    <!-- <ng-content select=".employee-info"></ng-content> -->
+  </div>
+</div>
+
+<div class="card shadow-sm m-4 text-white">
+  <div class="card-header bg-primary m-1">
+    <h2>This is content children</h2>
+  </div>
+  <div class="card-body bg-secondary m-1 text-white">
+    <table class="table table-boarded color-black">
+      <thead>
+        <th>this is the info regarding the content children from the parent</th>
+      </thead>
+      <tbody>
+        @for (item of empinfo; track $index) {
+          <tr>
+            {{
+              item
+            }}
+          </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+</div>
 
 <button class="btn btn-primary mt-3" (click)="showemployeeinfo()">click here</button>
-
-<h2>{{ this.empinfo }}</h2>

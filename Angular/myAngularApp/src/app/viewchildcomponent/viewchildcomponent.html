@@ -23,7 +23,7 @@
       <button class="btn btn-primary mb-0" (click)="showemployee()">click</button>
       <!-- </div>   -->
       <!-- <div> -->
-      <h2>{{ empname }}</h2>
+      <h4>{{ Sempname() }}</h4>
       <!-- </div> -->
     </div>
   </div>
@@ -65,7 +65,7 @@
     <button class="btn btn-success mt-3" (click)="showEmpInfo()">click for employee info</button>
     <!-- <div>{{employeeinfo}}</div> -->
     <h3>{{ message }}</h3>
-    @for (item of empinfo; track $index) {
+    @for (item of empinfo(); track $index) {
       <h5>{{ item }}</h5>
     }
   </div>

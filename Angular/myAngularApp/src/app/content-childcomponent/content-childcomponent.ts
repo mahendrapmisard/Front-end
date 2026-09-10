@@ -1,5 +1,5 @@
 import { Component, ContentChild, ContentChildren, ElementRef, QueryList } from '@angular/core';
-import { ɵEmptyOutletComponent } from "@angular/router";
+import { ɵEmptyOutletComponent } from '@angular/router';
 
 @Component({
   selector: 'app-content-childcomponent',
@@ -8,29 +8,23 @@ import { ɵEmptyOutletComponent } from "@angular/router";
   styleUrl: './content-childcomponent.css',
 })
 export class ContentChildcomponent {
+  @ContentChildren('employeinfo') employeeinfo!: QueryList<ElementRef<HTMLElement>>;
 
-@ContentChildren('employeinfo') employeeinfo !: QueryList<ElementRef<HTMLElement>>;
+  @ContentChild('employeename') employeename!: ElementRef<HTMLElement>;
+  empinfo: string[] = [];
+  empname = '';
 
+  showemployeeinfo() {
+    // let empinfo :string[] = []
+    // this.empinfo =
 
-@ContentChild('employeename') employeename !: ElementRef<HTMLElement>;
-empinfo :string[]= []
-empname = ''
+    // this.empname = this.employeename.nativeElement.value
+    this.employeeinfo.forEach((item) => {
+      this.empinfo.push(item.nativeElement.innerText);
+    });
+    // console.log(this.employeeinfo)
 
-showemployeeinfo(){
-// let empinfo :string[] = []
-// this.empinfo = 
-
-// this.empname = this.employeename.nativeElement.value
-this.employeeinfo.forEach((item)=>{
-  this.empinfo.push(item.nativeElement.innerText)
-})
-// console.log(this.employeeinfo)
-
-
-this.empname = this.employeename.nativeElement.textContent
-// console.log(this.empname)
-
-
-}
-
+    this.empname = this.employeename.nativeElement.textContent;
+    // console.log(this.empname)
+  }
 }

@@ -7,7 +7,7 @@
   <div class="card-body bg-secondary m-1 text-white">
     <h5>
       Getting this data from parent html
-      <div style="color: red; text-shadow: black">{{ empname }}</div>
+      <div style="color: black; text-shadow: black">{{ empname }}</div>
     </h5>
     <!-- <ng-content select=".employee-info"></ng-content> -->
   </div>
@@ -20,10 +20,10 @@
   <div class="card-body bg-secondary m-1 text-white">
     <table class="table table-boarded color-black">
       <thead>
-        <th>this is the info regarding the content children from the parent</th>
+        <th>This is the info regarding the content children from the parent</th>
       </thead>
       <tbody>
-        @for (item of empinfo; track $index) {
+        @for (item of empinfo(); track $index) {
           <tr>
             {{
               item

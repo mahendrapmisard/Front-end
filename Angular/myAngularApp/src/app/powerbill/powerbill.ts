@@ -7,12 +7,12 @@ import { Component } from '@angular/core';
   styleUrl: './powerbill.css',
 })
 export class Powerbill {
-  showmsg(billno: any) {
-    // console.log(billno);
+  showmsg(billno: any) {}
+  // console.log(billno);
 
-    // this.people.forEach
+  // this.people.forEach
 
-     people =[
+  people = [
     {
       name: 'mahendra',
       powerbilno: 8977,
@@ -22,25 +22,21 @@ export class Powerbill {
       name: 'pavithra',
       powerbilno: 1234,
       paid: true,
-    }
+    },
   ];
 
-    this.people.forEach((item) => {
-      if (item.paid == true && item.powerbilno == billno) {
-        
-          console.log('you have paid the power bill');
-        } else {
-          console.log('please pay the power bill');
-        }
-      });
-    
-  
+  // this.people.forEach((item) => {
+  //   if (item.paid == true && item.powerbilno == billno) {
+
+  //       console.log('you have paid the power bill');
+  //     } else {
+  //       console.log('please pay the power bill');
+  //     }
+  //   });
 
   //   type Person = {
   //     name:string;
   //   paid: boolean;
   //   powerbilno: string | number;
   // };
- 
-}
 }

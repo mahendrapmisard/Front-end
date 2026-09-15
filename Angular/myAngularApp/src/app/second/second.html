@@ -1,20 +1,47 @@
 <!-- <p [style.color]="textcolor">second works!</p> -->
 
-<div>
+<div class="m-4">
+  <h4>ngStyle with no binding</h4>
   <button
     [ngStyle]="{
-      'background-color': backgroundcolor,
-      color: btncolor,
+      'background-color': 'yellow',
+      color: 'black',
+      'border-radius': '10px',
+    }"
+  >
+    ng-style no binding
+  </button>
+</div>
+<br />
+
+<div class="m-4">
+  <h4>ngStyle with binding</h4>
+  <button
+    [ngStyle]="{
+      'background-color': ngStyleleBgColor,
+      color: ngStylelebtncolor,
     }"
     (click)="btnclick($event)"
   >
-    {{ buttontext }}
+    {{ ngStylelebuttontext }}
   </button>
 </div>
-<div></div>
-
 <br />
-<div>
+
+<div class="m-3">
+  <h4>ngClass with out binding</h4>
+  <button
+    [ngClass]="{
+      ngclassnb: true,
+    }"
+  >
+    ngclass with out binding
+  </button>
+</div>
+<br />
+
+<div class="m-3">
+  <h4>ngClass with binding</h4>
   <button
     [ngClass]="{
       redlight: trafficlight == 'red',
@@ -22,12 +49,12 @@
       orangelight: trafficlight == 'orange',
     }"
   >
-    ngclass
+    {{ trafficMessage }}
   </button>
 </div>
 <br />
 
-<span style="display: flex; gap: 15px">
+<span style="display: flex; gap: 15px" class="m-3">
   <span>
     <button [style.background-color]="'green'" value="green" (click)="changefunction($event)">
       green
@@ -39,26 +66,26 @@
     </button>
   </span>
   <span>
-    <button [style.background-color]="'orange'" value="orange" (click)="changefunction($event)">
+    <button [style.background-color]="'yellow'" value="orange" (click)="changefunction($event)">
       orange
     </button>
   </span>
 </span>
 
-<ul>
+<!-- <ul>
   @for (i of products; track i.productId) {
     <li>{{ i.productName }}has {{ i.price }}</li>
   }
-</ul>
+</ul> -->
 <!-- <h4>please enter the marks</h4> -->
-<input type="text" [(ngModel)]="marks" #enteredmarks />
+<!-- <input type="text" [(ngModel)]="marks" #enteredmarks /> -->
 
 <!-- <ng-template *ngIf="marks >= 75;else failed"><h1>{{ pass }}</h1></ng-template> -->
 
 <!-- <ng-template *ngIf="marks == 0; else nomessage"><h2>please enter the marks</h2></ng-template> -->
 
 <!-- <ng-template #nomessage; ><h1 *ngIf="marks < 75; else passedtemplate">{{ failed }}</h1></ng-template> -->
-
+<!-- 
 <ng-template #passedtemplate;
   ><h3>{{ pass }}</h3></ng-template
 >
@@ -81,4 +108,4 @@
   <h1>pass</h1>
 } @else {
   <h1>pelase enter valid marks</h1>
-}
+} -->

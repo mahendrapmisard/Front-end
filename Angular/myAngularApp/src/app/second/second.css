@@ -1,6 +1,6 @@
-/* .greenlight{
+.greenlight{
     background-color: green;
-    color: black;
+    color: gold;
     border-radius: 20px;
 }
 
@@ -11,7 +11,16 @@
 }
 
 .orangelight{
-    background-color: orange;
+    background-color: yellow;
     color: black;
      border-radius: 20px;
-} */
+}
+
+.ngclassnb{
+    background-color: mediumaquamarine;
+border-radius: 20px;
+border-color: black;
+box-shadow: tomato;
+    color: brown;
+
+}

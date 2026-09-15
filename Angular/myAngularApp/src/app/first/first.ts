@@ -8,25 +8,27 @@ import { NgStyle } from '@angular/common';
   styleUrl: './first.css',
 })
 export class First {
-
-
   textColor = 'white';
-  backgroundColor = 'blue';
+  backgroundColor = 'red';
   fontSize = '20px';
+
+  signMessage = 'stop';
 
   makeRed() {
     this.textColor = 'white';
     this.backgroundColor = 'red';
+    this.signMessage = 'stop';
   }
 
   makeGreen() {
     this.textColor = 'white';
     this.backgroundColor = 'green';
+    this.signMessage = 'go';
   }
 
   makeBlue() {
     this.textColor = 'white';
-    this.backgroundColor = 'blue';
+    this.backgroundColor = 'orange';
+    this.signMessage = 'be ready';
   }
-
 }

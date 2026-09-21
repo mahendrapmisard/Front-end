@@ -1,5 +1,11 @@
 <!-- <p>iotwo-way-parent-component works!</p> -->
-<app-iotwo-way-child-component [incomingValue]="inputtemp.value"></app-iotwo-way-child-component>
-
-<input type="text" #inputtemp />
+<!-- <input type="text" (input)="inputValue = $any($event.target).value" /> -->
 <!-- <button class="btn btn-primary" ></button> -->
+
+<!-- <button class="btn btn-primary" (click)="showvalueobj()">click</button> -->
+<input type="text" [(ngModel)]="parentvalue" />
+<app-iotwo-way-child-component
+  [childincommingvalue]="parentvalue"
+  (outgoingchildvalue)="showvalueobj($event)"
+></app-iotwo-way-child-component>
+<h4>from parent html element {{ parentvalue }}</h4>

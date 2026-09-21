@@ -1,4 +1,4 @@
-import { Component, Input, input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-iotwo-way-child-component',
@@ -7,9 +7,10 @@ import { Component, Input, input } from '@angular/core';
   styleUrl: './iotwo-way-child-component.css',
 })
 export class IOTwoWayChildComponent {
-  @Input() incomingValue = '';
-  // uppervalue: string = this.incomingValue.toUpperCase();;
-  // this.uppervalue = 
-  // convertto() {
-  // }
+  @Input() childincommingvalue = '';
+
+  @Output() outgoingchildvalue = new EventEmitter<string>();
+  convertto() {
+    this.outgoingchildvalue.emit(this.childincommingvalue.toUpperCase());
+  }
 }

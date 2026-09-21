@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, ElementRef, EventEmitter, Input, Output, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-iotwo-way-child-component',
@@ -9,8 +9,20 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 export class IOTwoWayChildComponent {
   @Input() childincommingvalue = '';
 
+
+
   @Output() outgoingchildvalue = new EventEmitter<string>();
   convertto() {
-    this.outgoingchildvalue.emit(this.childincommingvalue.toUpperCase());
+    this.outgoingchildvalue.emit(this.paravalue.nativeElement.textContent);
   }
+
+  @ViewChild('paravalue') paravalue !: ElementRef<HTMLParagraphElement>;
+
+  showparaelemet(){
+console.log(this.paravalue.nativeElement.textContent)
+  }
+
+
+
+
 }

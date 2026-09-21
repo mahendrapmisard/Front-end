@@ -10,9 +10,10 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './iotwo-way-parent-component.css',
 })
 export class IOTwoWayParentComponent {
-  parentvalue = '';
+  parentvalue = ''
 
   showvalueobj(message:any) {
-   this.parentvalue= 
+  //  this.parentvalue= 
+  console.log(`this is from parent component ${message}`)
   }
 }

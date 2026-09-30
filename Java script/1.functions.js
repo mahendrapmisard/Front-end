@@ -2,7 +2,7 @@
 // debugger;
 let name = "mahendra";
 const pi = 3.14;
-console.log(name);
+console.log(this.name);
 
 
 
